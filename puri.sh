@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp  potigolutil.scala saida.scala
-echo "object Main extends App{" >> saida.scala
-potigol -d %1 | tail -n +7 >> saida.scala
-echo "}" >> saida.scala
+cp potigolutil.scala $1.scala
+echo "object Main extends App{" >> $1.scala
+potigol -d $1 | tail -n +6 >> $1.scala
+echo "}" >> $1.scala
