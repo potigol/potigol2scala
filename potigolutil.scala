@@ -19,8 +19,6 @@ object Potigolutil {
   type Matriz[T] = Lista[Lista[T]]
   type Cubo[T] = Lista[Lista[Lista[T]]]
 
-  var $cor = false
-
   // valores
   val verdadeiro = true
   val falso = false
@@ -221,12 +219,8 @@ object Potigolutil {
     def texto: Texto = para_texto
   }
 
-  private[this] def corSim = print("\033[32m")
-  private[this] def corNao = print("\033[37m")
   def leia(): Texto = {
-    if ($cor) corSim
     val s = StdIn.readLine()
-    if ($cor) corNao
     s
   }
 
@@ -277,7 +271,6 @@ object Potigolutil {
   def leia_reais(separador: Texto): Lista[Real] = leia_nums(separador)
 
   def escreva(texto: Any): Unit = {
-    if ($cor) corNao
     texto match {
       case true  => Console.println("verdadeiro")
       case false => Console.println("falso")
@@ -285,7 +278,6 @@ object Potigolutil {
     }
   }
   def imprima(texto: Any): Unit = {
-    if ($cor) corNao
     texto match {
       case true  => Console.print("verdadeiro")
       case false => Console.print("falso")
@@ -314,12 +306,5 @@ object Potigolutil {
       primeiro: T1, segundo: T2, terceiro: T3, quarto: T4, quinto: T5, sexto: T6,
       sétimo: T7, oitavo: T8, nono: T9, décimo: T10) {
     def setimo: T7 = sétimo; def decimo: T10 = décimo
-  }
-
-  case class URL(caminho: Texto) {
-    lazy val erro = conteudo == ""
-    lazy val conteudo = Try {
-      io.Source.fromURL(caminho).mkString("")
-    } getOrElse ("")
   }
 }
