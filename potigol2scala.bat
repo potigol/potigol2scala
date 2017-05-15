@@ -1,4 +1,5 @@
 echo off
+chcp 65001
 echo /* Traducao de Potigol para Scala > %1.scala
 type %1 >> %1.scala
 echo */ >> %1.scala
