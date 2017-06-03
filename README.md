@@ -4,8 +4,15 @@ Script (bash) que traduz programas escritos em Potigol para Scala
 
 
 ````bash
+potigol2scala.sh media.poti
+```` 
+
+No Windows use
+
+````bash
 potigol2scala media.poti
 ```` 
+
 
 ## Motivação
 
