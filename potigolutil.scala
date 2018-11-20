@@ -230,7 +230,6 @@ object Potigolutil {
     }
 
     def %(fmt: Texto): Texto = formato(fmt)
-    @deprecated("Use 'texto'", since094) def para_texto: Texto = texto
     def texto: Texto = x.toString
     def qual_tipo: Texto = x match {
       case a: Inteiro  => "Inteiro"
