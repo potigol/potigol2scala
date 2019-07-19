@@ -24,7 +24,7 @@ Poder usar a linguagem Potigol para resolver as questões do [URI Online Judge](
 ## Instalação
 
  - Instale o linguagem [Potigol](https://potigol.github.io)
- - Faça o download deste projeto
+ - Faça o download deste [projeto](https://github.com/potigol/potigol2scala/archive/master.zip)
  
 ## Exemplo de uso
  - Crie arquivo `1001.poti`
